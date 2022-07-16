@@ -1,0 +1,16 @@
+* {
+    box-sizing: border-box;
+}
+
+/* .flex {
+    display: flex;
+    flex-wrap: wrap;
+} */
+
+.hidden {
+    display: none;
+}
+
+.block:hover .hidden{
+    display: block;
+}

@@ -1,0 +1,14 @@
+{
+  "name": "movies-app",
+  "version": "1.0.0",
+  "description": "An api based movies and series information web-app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Avi Sharma",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.1.6"
+  }
+}
