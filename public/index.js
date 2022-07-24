@@ -12,6 +12,37 @@ const getData = (apiUrl) => {
     .then((data) => showData(data.results));
 };
 
+// const helperFunction = () => {
+//   let str = "";
+//   const mainBody = document.getElementById("main-content");
+//   mainBody.innerHTML = "";
+//   for (let i = 0; i < 10; i++) {
+//     str += `<div class="movie block max-w-[450px] w-[100%] rounded-[1rem] m-[1.5rem] shadow-lg relative md:max-w-[350px]">
+//         <img
+//           src="https://image.tmdb.org/t/p/w500/wKiOkZTN9lUUUNZLmtnwubZYONg.jpg"
+//           alt="movie poster"
+//           class="movie-poster h-auto drop-shadow-2xl rounded-[1rem]"
+//         />
+//         <div class="absolute rounded-[1rem] backdrop-blur-xl text-white translate-y-[-100%] p-[1rem]">
+//           <div class="movie-info font-bold text-xl flex justify-between text-[1.75rem] sm:text-[2rem]">
+//             <p class="title my-[1rem]">Minions: The Rise of Gru</p>
+//             <p class="rating self-center bg-green-500 px-[0.5rem] py-[0.3rem] rounded-md">7.5</p>
+//           </div>
+//           <div class="overview text-[1.35rem] sm:text-[1.5rem]">
+//             <p>
+//               A fanboy of a supervillain supergroup known as the Vicious 6, Gru
+//               hatches a plan to become evil enough to join them, with the backup
+//               of his followers,<b>...</b>
+//             </p>
+//           </div>
+//         </div>
+//       </div>`;
+//   }
+//   mainBody.innerHTML = str;
+// };
+
+// helperFunction();
+
 const showData = (data) => {
   const mainBody = document.getElementById("main-content");
   mainBody.innerHTML = "";
@@ -19,17 +50,17 @@ const showData = (data) => {
   data.forEach((data) => {
     const movieElement = document.createElement("div");
     let overview = data.overview;
-    overview = overview.slice(0,150);
+    overview = overview.slice(0, 150);
     movieElement.classList.add(
       "movie",
       "block",
+      "max-w-[450px]",
+      "w-[100%]",
       "rounded-[1rem]",
+      "m-[1.5rem]",
       "shadow-lg",
-      "w-[35%]",
-      "max-w-[350px]",
-      "m-[1rem]",
-      "self-start",
-      "relative"
+      "relative",
+      "md:max-w-[350px]"
     );
 
     if (data.poster_path == null) {
@@ -39,7 +70,9 @@ const showData = (data) => {
             <p class="px-[1rem] py-[0.5rem] font-[700] text-center text-red-600">SORRY!! No Poster Available Now :(</p>
             <div class="flex font-bold justify-evenly text-[1.6em]">
               <p class="title">${data.title}</p>
-              <p class="rating self-center bg-${renderRatingColor(data.vote_average)} px-[0.5rem] py-[0.3rem] rounded-md">${data.vote_average}</p>
+              <p class="rating self-center bg-${renderRatingColor(
+                data.vote_average
+              )} px-[0.5rem] py-[0.3rem] rounded-md">${data.vote_average}</p>
             </div>
             <div class="overview text-[1.12rem]">
               <p class="overflow-hidden">
@@ -52,15 +85,17 @@ const showData = (data) => {
           <img
             src="${imageUrl + data.poster_path}"
             alt="movie poster"
-            class="movie-poster rounded-[1rem] drop-shadow-2xl h-auto"/>
-          <div class="absolute rounded-[1rem] backdrop-blur-xl text-white translate-y-[-100%] hidden">
-            <div class="movie-info font-bold text-xl m-4 flex justify-between text-[1.25rem]">
-              <p class="title">${data.title}</p>
-              <p class="rating self-center ${renderRatingColor(data.vote_average)} px-[0.5rem] py-[0.3rem] rounded-md">${data.vote_average}</p>
+            class="movie-poster h-auto drop-shadow-2xl rounded-[1rem]"/>
+          <div class="absolute rounded-[1rem] backdrop-blur-xl text-white translate-y-[-100%] p-[1rem] hidden">
+            <div class="movie-info font-bold text-xl flex justify-between text-[1.75rem] sm:text-[2rem]">
+              <p class="title my-[1rem]">${data.title}</p>
+              <p class="rating self-center ${renderRatingColor(
+                data.vote_average
+              )} px-[0.5rem] py-[0.3rem] rounded-md">${data.vote_average}</p>
             </div>
-            <div class="overview text-[1.12rem] m-4">
+            <div class="overview text-[1.35rem] sm:text-[1.5rem]">
               <p>
-              ${overview +'<b>...</b>'}
+              ${overview + "<b>...</b>"}
               </p>
             </div>
           </div>`;
@@ -80,14 +115,14 @@ const searchMovie = (searchUrl) => {
 };
 
 const renderRatingColor = (rating) => {
-  if(rating >= 7.5) {
-    return 'bg-green-500';
-  } else if(rating >= 4.5 && rating <= 7.4) {
-    return 'bg-orange-500';
+  if (rating >= 7.5) {
+    return "bg-green-500";
+  } else if (rating >= 4.5 && rating <= 7.4) {
+    return "bg-orange-500";
   } else {
-    return 'bg-red-500';
+    return "bg-red-500";
   }
-}
+};
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -95,4 +130,3 @@ form.addEventListener("submit", (e) => {
 });
 
 getData(apiUrl);
-// searchMovie(searchUrl);

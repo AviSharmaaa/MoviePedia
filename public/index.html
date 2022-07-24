@@ -12,13 +12,13 @@
   <body>
     <header
       id="search"
-      class="flex justify-between px-[1.5rem] py-[1rem] shadow-lg"
+      class="flex justify-between px-[1.5rem] py-[1rem] shadow-lg w-[100%] gap-[1rem]"
     >
-      <h1 class="brand-banner font-bold text-[1.6rem] flex">
+      <h1 class="brand-banner text-[1.35rem] font-bold flex sm:text-[2rem]">
         MoviePedia
         <span
           ><img
-            class="w-[2rem] mx-[0.5rem]"
+            class="w-[3rem] mx-[0.5rem] hidden sm:block"
             src="https://img.icons8.com/external-sbts2018-solid-sbts2018/58/000000/external-clapperboard-social-media-sbts2018-solid-sbts2018.png"
         /></span>
       </h1>
@@ -27,215 +27,42 @@
           type="text"
           id="search-bar"
           placeholder="Search Movie"
-          class="px-[1rem] py-[0.5rem] rounded-full bg-gray-200 focus:outline-none"
+          class="pl-[1rem] py-[0.5rem] rounded-full bg-gray-200 focus:outline-none"
         />
       </form>
     </header>
 
     <main id="main-content" class="flex flex-wrap px-[1rem] justify-evenly">
       <!-- <div
-        class="movie rounded-[1rem] shadow-lg w-[35%] max-w-[250px] m-[1rem] self-start relative"
+        class="movie block max-w-[450px] w-[100%] rounded-[1rem] m-[1.5rem] shadow-lg relative md:max-w-[350px]"
       >
-        <div class="bg-white m-4">
-          <p class="px-[1rem] py-[0.5rem] font-[700] text-center text-red-600">SORRY!! No Poster Available Now :(</p>
-          <div class="flex font-bold justify-between text-[1.6em]">
-            <p class="title">Thor Love and Thunder</p>
-            <p class="rating text-green-900 px-[0.5rem] py-[0.12rem">9.8</p>
+        <img
+          src="https://image.tmdb.org/t/p/w500/wKiOkZTN9lUUUNZLmtnwubZYONg.jpg"
+          alt="movie poster"
+          class="movie-poster h-auto drop-shadow-2xl rounded-[1rem]"
+        />
+        <div
+          class="absolute rounded-[1rem] backdrop-blur-xl text-white translate-y-[-100%] p-[1rem]"
+        >
+          <div
+            class="movie-info font-bold text-xl flex justify-between text-[1.75rem] sm:text-[2rem]"
+          >
+            <p class="title my-[1rem]">Minions: The Rise of Gru</p>
+            <p
+              class="rating self-center bg-green-500 px-[0.5rem] py-[0.3rem] rounded-md"
+            >
+              7.5
+            </p>
           </div>
-          <div class="overview text-[1.12rem]">
+          <div class="overview text-[1.35rem] sm:text-[1.5rem]">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Aspernatur dolorem fugiat, repellat harum facere ipsum corrupti
-              ad? Natus, explicabo perspiciatis?
+              A fanboy of a supervillain supergroup known as the Vicious 6, Gru
+              hatches a plan to become evil enough to join them, with the backup
+              of his followers,<b>...</b>
             </p>
           </div>
         </div>
       </div> -->
-      <!-- <div
-      class="movie block rounded-[1rem] drop-shadow-2xl w-[45%] max-w-[400px] m-[1rem] self-start relative"
-    >
-      <img
-        src="https://terrigen-cdn-dev.marvel.com/content/prod/1x/thorloveandthunder_teaser_printed_1-sht_v4_lg.jpg"
-        alt="movie poster"
-        class="movie-poster drop-shadow-2xl h-auto rounded-[1rem]"
-      />
-
-      <div
-        class="absolute rounded-[1rem] backdrop-blur-xl text-white translate-y-[-100%] hidden"
-      >
-        <div
-          class="movie-info font-bold text-xl m-4 flex justify-between text-[1.25rem]"
-        >
-          <p class="title">Thor Love and Thunder</p>
-          <p class="rating text-green-900 px-[0.5rem] py-[0.12rem">9.8</p>
-        </div>
-        <div class="overview text-[1.12rem] m-4">
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta
-            libero ex sint quis. Explicabo necessitatibus ipsum facere ipsam
-            nobis reprehenderit?
-          </p>
-        </div>
-      </div>
-    </div>
-    <div
-      class="movie block rounded-lg shadow-lg w-[45%] max-w-[400px] m-[1rem] self-start relative"
-    >
-      <img
-        src="https://terrigen-cdn-dev.marvel.com/content/prod/1x/thorloveandthunder_teaser_printed_1-sht_v4_lg.jpg"
-        alt="movie poster"
-        class="movie-poster h-auto"
-      />
-
-      <div
-        class="absolute backdrop-blur-xl text-white translate-y-[-100%] hidden"
-      >
-        <div
-          class="movie-info font-bold text-xl m-4 flex justify-between text-[1.25rem]"
-        >
-          <p class="title">Thor Love and Thunder</p>
-          <p class="rating text-green-900 px-[0.5rem] py-[0.12rem">9.8</p>
-        </div>
-        <div class="overview text-[1.12rem] m-4">
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta
-            libero ex sint quis. Explicabo necessitatibus ipsum facere ipsam
-            nobis reprehenderit?
-          </p>
-        </div>
-      </div>
-    </div><div
-    class="movie block rounded-lg shadow-lg w-[45%] max-w-[400px] m-[1rem] self-start relative"
-  >
-    <img
-      src="https://terrigen-cdn-dev.marvel.com/content/prod/1x/thorloveandthunder_teaser_printed_1-sht_v4_lg.jpg"
-      alt="movie poster"
-      class="movie-poster h-auto"
-    />
-
-    <div
-      class="absolute backdrop-blur-xl text-white translate-y-[-100%] hidden"
-    >
-      <div
-        class="movie-info font-bold text-xl m-4 flex justify-between text-[1.25rem]"
-      >
-        <p class="title">Thor Love and Thunder</p>
-        <p class="rating text-green-900 px-[0.5rem] py-[0.12rem">9.8</p>
-      </div>
-      <div class="overview text-[1.12rem] m-4">
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta
-          libero ex sint quis. Explicabo necessitatibus ipsum facere ipsam
-          nobis reprehenderit?
-        </p>
-      </div>
-    </div>
-  </div><div
-  class="movie block rounded-lg shadow-lg w-[45%] max-w-[400px] m-[1rem] self-start relative"
->
-  <img
-    src="https://terrigen-cdn-dev.marvel.com/content/prod/1x/thorloveandthunder_teaser_printed_1-sht_v4_lg.jpg"
-    alt="movie poster"
-    class="movie-poster h-auto"
-  />
-
-  <div
-    class="absolute backdrop-blur-xl text-white translate-y-[-100%] hidden"
-  >
-    <div
-      class="movie-info font-bold text-xl m-4 flex justify-between text-[1.25rem]"
-    >
-      <p class="title">Thor Love and Thunder</p>
-      <p class="rating text-green-900 px-[0.5rem] py-[0.12rem">9.8</p>
-    </div>
-    <div class="overview text-[1.12rem] m-4">
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta
-        libero ex sint quis. Explicabo necessitatibus ipsum facere ipsam
-        nobis reprehenderit?
-      </p>
-    </div>
-  </div>
-</div><div
-class="movie block rounded-lg shadow-lg w-[45%] max-w-[400px] m-[1rem] self-start relative"
->
-<img
-  src="https://terrigen-cdn-dev.marvel.com/content/prod/1x/thorloveandthunder_teaser_printed_1-sht_v4_lg.jpg"
-  alt="movie poster"
-  class="movie-poster h-auto"
-/>
-
-<div
-  class="absolute backdrop-blur-xl text-white translate-y-[-100%] hidden"
->
-  <div
-    class="movie-info font-bold text-xl m-4 flex justify-between text-[1.25rem]"
-  >
-    <p class="title">Thor Love and Thunder</p>
-    <p class="rating text-green-900 px-[0.5rem] py-[0.12rem">9.8</p>
-  </div>
-  <div class="overview text-[1.12rem] m-4">
-    <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta
-      libero ex sint quis. Explicabo necessitatibus ipsum facere ipsam
-      nobis reprehenderit?
-    </p>
-  </div>
-</div>
-</div>
-<div
-class="movie block rounded-lg shadow-lg w-[45%] max-w-[400px] m-[1rem] self-start relative"
->
-<img
-  src="https://terrigen-cdn-dev.marvel.com/content/prod/1x/thorloveandthunder_teaser_printed_1-sht_v4_lg.jpg"
-  alt="movie poster"
-  class="movie-poster h-auto"
-/>
-
-<div
-  class="absolute backdrop-blur-xl text-white translate-y-[-100%] hidden"
->
-  <div
-    class="movie-info font-bold text-xl m-4 flex justify-between text-[1.25rem]"
-  >
-    <p class="title">Thor Love and Thunder</p>
-    <p class="rating text-green-900 px-[0.5rem] py-[0.12rem">9.8</p>
-  </div>
-  <div class="overview text-[1.12rem] m-4">
-    <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta
-      libero ex sint quis. Explicabo necessitatibus ipsum facere ipsam
-      nobis reprehenderit?
-    </p>
-  </div>
-</div>
-</div><div
-class="movie block rounded-lg shadow-lg w-[45%] max-w-[400px] m-[1rem] self-start relative"
->
-<img
-  src="https://terrigen-cdn-dev.marvel.com/content/prod/1x/thorloveandthunder_teaser_printed_1-sht_v4_lg.jpg"
-  alt="movie poster"
-  class="movie-poster h-auto"
-/>
-
-<div
-  class="absolute backdrop-blur-xl text-white translate-y-[-100%] hidden"
->
-  <div
-    class="movie-info font-bold text-xl m-4 flex justify-between text-[1.25rem]"
-  >
-    <p class="title">Thor Love and Thunder</p>
-    <p class="rating text-green-900 px-[0.5rem] py-[0.12rem">9.8</p>
-  </div>
-  <div class="overview text-[1.12rem] m-4">
-    <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta
-      libero ex sint quis. Explicabo necessitatibus ipsum facere ipsam
-      nobis reprehenderit?
-    </p>
-  </div>
-</div>
-</div> -->
     </main>
     <script src="index.js"></script>
   </body>
